@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Today's News</title>
+</head>
+<body>
+    <div class="top-container">
+        <h3>오늘의 보안 주요 뉴스</h3>
+
+        <p>오늘 발행할 뉴스를 선택한 뒤, "뉴스 발행하기" 버튼을 눌러주세요.</p>
+    </div>
+    <div class="header" id="myHeader">
+        <ul>
+            <li id="today">{Date}</li>
+            <li style="float:right" id="news-send1"><b>뉴스 발행하기</b></li>
+        </ul>
+    </div>
+    <div class="content">
+        <table class="news-table">
+            <thead>
+                <tr>
+                    <th>
+                        제목
+                    </th>
+                    <th>
+                        내용 (요약)
+                    </th>
+                </th>
+            </thead>
+            <tbody>
+                {datatable}
+            </tbody>
+        </table>
+    </div>
+    <!--MODAL 추가 -->
+    <div class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close" id="modal-close">&times;</span>
+                <h2>뉴스 확인</h2>
+            </div>
+            <div class="modal-body">
+                <p id="modal-news-summary"></p>
+                <ul id="modal-news-list">
+                </ul> 
+            </div>
+            <div class="modal-footer">
+                <h2 id="news-send2">뉴스 발행하기</h2>
+            </div>
+        </div>
+    </div>
+    <!--MODAL 추가 끝-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="action.js"></script>
+</body>
+</html>

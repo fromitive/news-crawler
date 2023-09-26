@@ -1,0 +1,9 @@
+renderer.py
+__pycache__
+*.pyc
+pages/index.html
+template/action.js
+template/style.css
+naverapi.key
+venv
+env
